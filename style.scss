@@ -1,0 +1,2117 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:100,100italic,200,300,300italic,400,400italic,500,500italic,600,700,700italic,900,900italic';
+
+
+
+$darkest-dark: #191937;
+$alternate-dark: #1f1f41;
+$background-dark: #26264e;
+$dropdown-dark: #36365c;
+$pop-up-dark: #2c2c50;
+$highlight-dark: #343463;
+ 
+$primary-white: #F9F9FD;
+$secondary-white: rgba(255, 255, 255, 0.9);
+ 
+$label-gray: #959cbc;
+$band-gray: #878fb0;
+$medium-gray: #707794;
+$missed-gray: #404069;
+$history-text-gray: #cdd1e2;
+$tile-gray: #40406a;
+ 
+$divider-blue: #364373;
+$focus-outline-blue: #4ca1ff;
+$button-blue-1: #3b4ba8;
+$radio-blue: #2196f3;
+$button-blue-popup: #3F51B5;
+$button-blue-hover: #394AD1;
+ 
+$green-bright: #21E0C1;
+$green-medium: rgba(12, 147, 138, 0.9);
+ 
+$red-bright: #FB7A78;
+$red-medium: #c6555f;
+ 
+$gold-bright: #fab27e;
+$gold-medium: #ac7c66;
+ 
+$ioi-yellow: #e2e06f;
+ 
+$orange-bright: #F5A201;
+$orange-medium: rgba(235, 156, 5, 0.8);
+ 
+$input-background: #313159;
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+body, button, input {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+
+
+#wrapper {
+    // height: 1000px;
+}
+
+#wrapper{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin: 1em auto;
+    position: relative;
+    // width: 750px;
+    background-color: $darkest-dark;
+}
+
+
+#wrapperHistory {
+    padding: 10px 0px 0 0px;
+    
+}
+
+.innerWrapperHistory {
+    height: 865px;
+    overflow-y: auto;
+}
+
+.topHeader {
+    width: 100%;
+    height: 30px;
+    padding: 6px;
+    position: relative;
+}
+
+.crbMaxQtyWrapperAmers { 
+    font-weight: 300;
+    display: flex;
+   
+}
+
+.titleClaim {
+    margin: 0px auto;
+    display: flex;
+    align-items: baseline;
+    height: 32px;
+    padding-bottom: 10px;
+}
+
+#tickerTitle {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 4px 0px;
+    max-width: 71%;
+}
+
+.crbMaxQtyText {
+    color: $primary-white;
+    letter-spacing: .8px;
+    margin-left: 8px;
+    font-size: 15px;
+}
+
+.crbMaxQtyTextLabel {
+    letter-spacing: .8px;
+    font-size: 14px;
+    font-weight: 400;
+    color: $label-gray;
+    /*margin-left: 5px;*/
+}
+
+#minMaxDivider {
+    color: $label-gray;
+}
+
+.mdi-dots-vertical {
+    
+    color: #acb2ce;
+    position: absolute;
+    right: 13px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: .3s;
+    top: 13px;
+}
+
+.mdi-dots-vertical:hover {
+    color: white;
+}
+
+.logo {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #0069CB;
+    border-radius: 50%;
+}
+
+.beaconLogoText {
+    display: inline-block;
+    position: relative;
+    margin-left: 5px;
+    top: -1px;
+    text-transform: uppercase;
+    color: $secondary-white;
+}
+
+.bar {
+    width: 100%;
+    height: 50px;
+    background-color: $background-dark;
+    position: relative;
+}
+
+.navigation {
+    margin-left: 38px;
+    padding-top: 18px;
+    font-size: 14px;
+    font-weight: 400;
+    color: $label-gray;
+    cursor: pointer;
+    letter-spacing: .8px;
+    font-size: 14px;
+    margin-left: 32px;
+
+    span {
+    padding-right: 15px;
+    }   
+
+    .selected {
+    
+    color: $secondary-white;
+    }
+
+
+}
+
+
+
+.tickerDetails {
+    position: relative;
+    
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.ricBbgToggle {
+    position: absolute;
+    top: 15px;
+    right: 53px;
+}
+
+
+.priceCostToggleLabel {
+    display: inline-block;
+    position: relative;
+    top: -7px;
+    color: $label-gray;
+    letter-spacing: .8px;
+}
+
+
+/* The switch - the box around the slider */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    height: 23px;
+    width: 38px;
+    margin: 0 5px;
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    display: none;
+}
+
+
+/* The slider */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #595982;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #c1c6e1;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #595982;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #394ad1;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+/* The slider */
+
+
+
+.tickerDetailsWrapper {
+    display: inline-block;
+}
+
+
+
+
+.spreadWrapper {
+    padding-top: 16px;
+    padding-bottom: 5px;
+    width: 95%;
+    letter-spacing: .8px;
+    margin: 20px auto 20px auto;
+    background-color: $background-dark;
+}
+
+.columnHead {
+    border-bottom: 1px $divider-blue solid;
+    padding-bottom: 12px;
+}
+
+.sideWrapper {
+    display: flex;
+    margin-top: 25px;
+    align-self: flex-end;
+}
+
+
+
+.NBBO, .NBBOsmall {
+    font-weight: 400;
+    color: $label-gray;
+}
+
+
+
+#buyChoose {
+    border: 1px solid $green-bright;
+    color: $green-bright;
+    margin-right: 15px;
+}
+
+#buyChoose:focus,
+#buyChoose.selectedSide {
+    color: white;
+    background-color: $green-medium;
+    border: 1px solid transparent;
+}
+
+#sellChoose, #shortChoose {
+    color: $red-bright;
+    border: 1px $red-bright solid;
+}
+
+#sellChoose {
+    margin-right: 15px;
+}
+
+#sellChoose:focus,
+#sellChoose.selectedSide,
+#shortChoose:focus,
+#shortChoose.selectedSide {
+    color: $red-bright;
+    color: white;
+    border: 1px solid transparent;
+    background-color: $red-medium;
+}
+
+#buyChoose:focus,
+#sellChoose:focus,
+#shortChoose:focus {
+    border: 1px $focus-outline-blue solid;
+}
+
+button {
+    border: 1px solid transparent;
+    outline: none;
+}
+
+button:focus {
+    border: 1px solid $focus-outline-blue;
+}
+
+
+.NBBO,
+.side {
+    
+    letter-spacing: .8px;
+}
+
+
+.NBBO {
+    
+    font-size: 15px;
+}
+
+.NBBOatQty {
+    position: absolute;
+    left: 374px;
+    top: 70px;
+    font-size: 16px;
+    color: $medium-gray;
+}
+
+.BBGRICtoggle {
+    position: absolute;
+    top: 45px;
+    left: 376px;
+}
+
+.side {
+    height: 37px;
+    padding-top: 3px;
+    transition: .3s;
+    text-align: center;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .3s;
+    outline: none;
+    border-radius: 5px;
+    width: 90px;
+    font-size: 14px;
+    letter-spacing: .8px;
+}
+
+.priceCostToggle {
+    position: absolute;
+    top: 14px;
+    right: 184px;
+}
+
+
+.touchWrapper {
+    margin: 35px auto 0px auto;
+    border-top: 1px solid $divider-blue;
+}
+
+.ticker {
+    color: $primary-white;
+    width: 150px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 10px 10px;
+    outline: none;
+    font-size: 16px;
+    height: 40px;
+    border: 1px solid $medium-gray;
+    text-transform: uppercase;
+    background-color: $input-background;
+}
+
+.ticker:focus {
+    border: 1px $focus-outline-blue solid;
+}
+
+.inputStyle {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: .4px;
+    color: $secondary-white;
+    padding: 4px 10px 0px 10px;
+    outline: none;
+    width: 150px;
+    height: 40px;
+    border: 1px solid $medium-gray;
+    background-color: $input-background;
+}
+
+.inputStyle:focus {
+    border: 1px $focus-outline-blue solid;
+}
+
+.amersTopInputs {
+    flex: 1;
+    width: 210px;
+}
+
+
+.amandaCursor {
+    cursor: auto;
+    cursor: url(cursor.png) 4 12, auto;
+}
+
+.clientRow {
+    display: flex;
+    align-items: center;
+    margin-top: 9px;
+    height: 27px;
+}
+
+#clientNamewrapper {
+    display: flex;
+    min-height: 15px;
+}
+
+#clientNamewrapper > #clientText {
+    min-width: 0;
+    max-width: 300px;
+    // padding: 3px 0;
+    white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+#clientNamewrapper > .horizontalLabel {
+    
+    // padding: 1px 0 4px 0;
+    padding-top: 1px;
+    
+}
+
+.claimText {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $primary-white;
+    left: 76px;
+    margin-left: 13px;
+    letter-spacing: .8px;
+    display: inline-block;
+}
+
+.touchRow1 {
+    display: flex;
+    padding: 15px 0px;
+}
+
+.NBBOwrapper {
+    display: inline-block;
+}
+.touchRow1 #ERVwrapper {
+    display: inline-block;
+}
+
+.touchRow1 #ADVwrapper {
+    display: inline-block;
+}
+
+.touchRow1 #NBBOqtyWrapper {
+    display: inline-block;
+}
+
+.flex1margin {
+    flex: 1;
+   
+}
+
+.flex2margin {
+    flex: 2;
+    
+}
+
+.buySellCol span {
+    display: inline-block;
+}
+
+.qtyAvail {
+    // display: inline-block;
+    color: $secondary-white;
+    font-weight: 300;
+    letter-spacing: .8px;
+    font-size: 15px;
+    margin-left: 8px;
+}
+
+
+
+.percentageSection,
+.priceSection {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.quantitySectionCol {
+    width: 27%;
+}
+
+.arrow {
+    height: 11px;
+    margin-top: 2px;
+
+}
+
+.arrow .cls-1 {
+    fill:none;
+    stroke:#878fb0;
+    stroke-miterlimit:10;
+    stroke-width:1.45px;
+}
+
+.arrow .cls-2 {
+    fill: #878fb0;
+}
+
+.quantitySection {
+    padding: 11px 20px 10px 0px;
+    font-size: 16px;
+    font-weight: 400;
+    color: $primary-white;
+    letter-spacing: .8px;
+    text-align: right;
+    background-color: $background-dark;
+}
+
+.horizontalLabel.quantitySectionCol {
+    text-align: right;
+    padding-right: 20px;
+}
+
+
+
+.plusSymbol, .minusSymbol {
+    margin-right: 10px;
+}
+
+
+
+.bip1, .bip2 {
+    margin-left: 10px;
+    font-size: 12px;
+    color: $band-gray;
+    align-self: center;
+}
+
+.buySellCol {
+    width: 68%;
+}
+
+.buySellColA {
+    width: 55%;
+    display: inline-flex;
+}
+.buySellColB {
+    width: 43%;
+    display: inline-flex;
+}
+
+.buySellSection {
+    padding: 11px 0px 10px 15px;
+    font-size: 16px;
+    display: flex;
+  
+    font-weight: 500;
+    color: #5C5C7A;
+    text-align: left !important;
+    background-color: $background-dark;
+}
+
+.horizontalLabel.buySellColA {
+    padding-left: 15px;
+}
+
+.horizontalLabel.buySellColB {
+    padding-left: 2px;
+}
+
+.topSection {
+    width: 95%;
+    margin: 19px auto 20px auto;
+    padding: 28px 30px 4px 30px;
+    background-color: $background-dark;
+    
+}
+
+.infoArea {
+    // height: 69px;
+    width: 95%;
+    margin: 30px auto 0 auto;
+    padding: 20px 30px;
+    background-color: $background-dark;
+    
+}
+
+
+
+#quantityInput2.quantityMisc {
+    font-size: 15px;
+    font-weight: 300;
+    color: $primary-white;
+    outline: none;
+    border: none;
+    padding-top: 8px;
+    background-color: transparent;
+    border: 1px $divider-blue solid;
+    padding-bottom: 9px;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: $primary-white;
+    text-transform: lowercase;
+    font-style: italic;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $primary-white;
+    text-transform: lowercase;
+    font-style: italic;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: $primary-white;
+    text-transform: lowercase;
+    font-style: italic;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: $primary-white;
+    text-transform: lowercase;
+    font-style: italic;
+}
+
+.clearable,
+.clearableTicker, .clearableClient, .clearableQuantity {
+    position: relative;
+}
+
+.clearable input[type=number],
+.clearable input[type=text],
+.clearableTicker input[type=text],
+.clearableClient input[type=text],
+.clearableQuantity input[type=number] {
+    padding-right: 24px;
+    box-sizing: border-box;
+}
+
+.clearable input::-ms-clear,
+.clearableTicker input::-ms-clear,
+.clearableClient input::-ms-clear,
+.clearableQuantity input::-ms-clear {
+    /* Remove IE default X */
+    display: none !important;
+}
+
+.clearableClient input::-ms-clear {
+    display: none !important;
+}
+
+.clearableQuantity input::-ms-clear {
+    display: none !important;
+}
+
+.clearable__clear {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 12px;
+    padding: 0 8px;
+    font-style: normal;
+    font-size: 1.4em;
+    color: white;
+    user-select: none;
+    cursor: pointer;
+}
+
+.IOIfieldsWrapper {
+    margin: 20px auto;
+    max-height: 93.1px;
+    overflow-y: auto;
+    width: 95%;
+    background-color: $background-dark;
+}
+
+.IOIflexRow {
+    display: flex;
+    padding: 15px 30px;
+    display: flex;
+    border-bottom: 5px $alternate-dark solid;
+}
+
+.IOIflexRow div {
+    flex: 1;
+}
+
+.IOIfieldsWrapper .IOIflexRow:last-child {
+    border-bottom: none !important;
+}
+
+.IOIdataField {
+    color: $secondary-white;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: .8px;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.horizontalLabel {
+    color: $label-gray;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .8px;
+}
+
+.dropLabel {
+    color: $label-gray;
+    letter-spacing: .8px;
+    font-size: 13px;
+    display: inline-block;
+    position: relative;
+    font-weight: 500;
+    top: -6px;
+}
+
+.horizontalDropLabel {
+    position: absolute;
+    top: 13px;
+    left: -57px;
+}
+
+.horizontalLabelWhite {
+    font-size: 13px;
+    color: $secondary-white;
+    letter-spacing: .8px;
+    font-weight: 300;
+}
+
+.threshWrapper {
+    margin-top: 10px;
+}
+
+.IOIcolor {
+    color: #e2e06f;
+}
+
+.pricerSideToggle {
+    position: absolute;
+    top: 92px;
+    left: 39px;
+}
+
+.parametersInputDiv {
+    display: inline-block;
+}
+
+.parametersInput {
+    width: 128px;
+    outline: none;
+    position: relative;
+}
+
+.parametersInput:focus {
+    border: 1px $focus-outline-blue solid;
+}
+
+input[type="number"].parametersInput::-webkit-outer-spin-button,
+input[type="number"].parametersInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    background: url("spinner.png") no-repeat center center;
+    background-color: transparent;
+    width: 10px;
+    border-left: none;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    right: 6px;
+    bottom: 0;
+}
+
+input[type="number"]#quantityInput2::-webkit-outer-spin-button,
+input[type="number"]#quantityInput2::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"].parametersInput::-webkit-inner-spin-button:hover,
+input[type="number"].parametersInput::-webkit-inner-spin-button:active {
+    opacity: .8;
+}
+
+#parametersSaveButton {
+    width: 90px;
+    color: white;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.parametersRow {
+    height: 179px;
+    color: $secondary-white;
+    font-size: 14px;
+    letter-spacing: .8px;
+    font-weight: 400;
+    text-align: center;
+    margin: 4px auto;
+    padding-top: 73px;
+    width: 98%;
+    background-color: $background-dark;
+}
+
+.valuesLambda {
+    display: inline-block;
+    padding-right: 30px;
+    font-size: 16px;
+}
+
+.parametersSaveDiv {
+    padding-left: 16px;
+    display: inline-block;
+}
+
+
+
+.horizontalInfoField {
+    color: $primary-white;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: .8px;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.NBBOsell {
+    color: $red-bright;
+}
+
+.NBBObuy {
+    color: $green-bright;
+}
+
+.spreadRow {
+    display: flex;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+#infoRow, #infoRow div {
+    display: flex;
+    align-items: flex-end;
+}
+
+.textGreen {
+    color: $green-bright;
+    font-weight: 400;
+}
+
+
+#quantityInput.quantityMisc {
+    font-size: 15px;
+    font-weight: 300;
+    color: $primary-white;
+    outline: none;
+    border: none;
+    padding-top: 8px;
+    background-color: transparent;
+}
+
+
+
+
+.bottomButtonRow {
+    width: 85%;
+    margin: 40px auto 20px auto;
+    display: flex;
+}
+
+.expire {
+    width: 20%;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.expire2 {
+    margin-top: 30px;
+}
+
+.expire2 span {
+    color: #F5A201;
+    font-weight: 400;
+}
+
+.crbButton {
+    text-transform: uppercase;
+    color: white;
+    min-width: 110px;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 2px;
+    font-size: 13px;
+    height: 37px;
+    letter-spacing: 1px;
+    display: inline-block;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.crbButtonsWide {
+    width: 46%;
+}
+
+.acceptButton {
+    margin-left: 15px;
+    background-color: $button-blue-1;
+}
+
+.acceptButton:hover {
+    background-color: $button-blue-hover;
+    transition: .3s;
+}
+
+.notTradedButton {
+    background-color: #404069;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.notTradedButton:hover {
+    background-color: #51517f;
+    transition: .3s;
+}
+
+
+
+.redText {
+    color: $red-bright;
+    font-weight: 400;
+}
+
+.restrictTrader {
+    color: $red-bright;
+}
+
+
+.restrictCRB {
+    color: $gold-bright;
+        
+}
+
+.restrictionTopRow {
+    width: 100%;
+    height: 48px;
+    padding-left: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#tickerZone {
+    padding: 0px 32px 0px 41px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-height: 800px;
+    overflow: auto;
+    margin-top: 20px;
+    
+}
+
+.colorKeyParent {
+    position: absolute;
+    top: 14px;
+    left: 248px;
+}
+
+#colorKey {
+    display: inline-block;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#colorKey:hover {
+    background-color: #1e1e40;
+    transition: .3s;
+}
+
+
+.mdi-key {
+    color: $secondary-white;
+    font-size: 17px;
+}
+
+#colorKeyList {
+    position: absolute;
+    padding: 20px 10px;
+    left: 36px;
+    top: -2px;
+    z-index: 5;
+    color: $primary-white;
+    width: 180px;
+    text-align: left;
+    background-color: $alternate-dark;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.13), 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.13), 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.13), 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+#colorKeyList .colorList {
+    padding: 8px 8px 8px 5px;
+    color: $primary-white;
+    letter-spacing: .8px;
+}
+
+.colorTitle {
+    color: white;
+    padding-left: 5px;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+#popUpCloseColorKey {
+    float: right;
+    position: absolute;
+    right: 13px;
+    top: 12px;
+    font-size: 20px;
+    margin-top: 5px;
+    color: $secondary-white;
+    cursor: pointer;
+}
+
+
+.tile {
+    // float: left;
+    // margin-right: 4%;
+    margin-bottom: 23px;
+    // margin-left: 2px;
+    text-align: center;
+    padding-top: 2px;
+    color: white;
+    letter-spacing: 1.2px;
+    width: 152px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 2px;
+    transition: .2s;
+    border: none;
+}
+
+.tile.hidden {
+    background-color: $background-dark;
+    color: $background-dark;
+}
+
+.regular {
+    cursor: pointer;
+    background-color: #40406a;
+    // border-bottom: 1px solid $darkest-dark;
+    // border-right: 1px solid $darkest-dark;
+}
+
+.regular:hover {
+    background-color: #636392;
+}
+
+.off {
+    cursor: pointer;
+    background-color: #c6555f;
+    font-weight: 500;
+}
+
+.off:hover {
+    background-color: saturate($red-medium, 20%);
+}
+
+.wayOff {
+    font-weight: 500;
+    background-color: $gold-medium;
+}
+
+// .wayOff:hover {
+//     background-color: saturate($gold-medium, 30%);
+// }
+
+.searchWrapper {
+    display: flex;
+    align-items: center;
+    flex-basis: 60%;
+}
+
+.searchField {
+    width: 200px;
+    height: 33px;
+    margin: 12px 16px 0px 10px;
+    border-radius: 21px;
+    outline: none;
+    border: none;
+    padding-left: 15px;
+    font-size: 14px;
+    color: $primary-white;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    background-image: url('search2.png');
+    background-size: 13px 13px;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 36px;
+    padding-top: 1px;
+    border: 1px solid $medium-gray;
+    background-color: $input-background;
+    
+}
+
+.searchField:focus {
+    border: 1px $focus-outline-blue solid;
+}
+
+
+/*////////////// POP  POP  POP UP & DROP Down Section //////////////////////*/
+
+#pricerToolBackground,
+#popUpBackground,
+#popUpBackground2,
+#popUpBackground3,
+#backgroundRestrictions {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, .6);
+}
+ 
+
+.dropdownMenuParent {
+    position: relative;
+}
+
+.dropMenuSortRestrictions {
+    // right: 44px;
+    // top: 11px;
+    // position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+
+.menuWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-basis: 40%;
+    padding-right: 43px;
+    margin-top: 12px;
+}
+
+.popUp {
+    width: 400px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #2c2c50;
+    position: absolute;
+    z-index: 4;
+    top: 82px;
+    left: 172px;
+}
+
+
+
+.popUpInfo {
+    width: 337px;
+    margin-top: 60px;
+}
+
+.popUpClient {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: .8px;
+    color: $secondary-white;
+}
+
+.popUpTicker {
+    color: $secondary-white;
+    font-size: 30px;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+
+.popUpSide {
+    font-size: 30px;
+    /*display: inline-flex;*/
+    margin-left: 20px;
+    margin-right: 20px;
+    font-weight: 300;
+}
+
+
+.popUpQty {
+    font-size: 30px;
+    color: $secondary-white;
+    font-weight: 300;
+}
+
+.popUp2menus {
+    margin-top: 48px;
+}
+
+.popUp2menuRows {
+    margin-top: 40px;
+}
+
+.editQtyPopup {
+    margin-top: 30px;
+}
+
+.editPricePopup {
+    margin-top: 30px;
+}
+
+.popUpText {
+    font-size: 15px;
+    color: $band-gray;
+    letter-spacing: .8px;
+    font-weight: 400;
+}
+
+.popUpPriceSet {
+    position: relative;
+    margin-top: 10px;
+}
+
+.spinner {
+    position: absolute;
+    top: 0px;
+    left: 303px;
+    width: 34px;
+    font-size: 18px;
+}
+
+.inputStyle.popUpPriceChoose, .inputStyle.popUpID {
+    width: 100%;
+    border: 1px solid $medium-gray;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    letter-spacing: .8px;
+    font-size: 16px;
+    color: $secondary-white;
+    background-color: $input-background;
+    padding: 10px 10px;
+}
+
+.popUpPriceChoose:focus {
+    border: 1px $focus-outline-blue solid;
+}
+
+input[type="number"].popUpPriceChoose::-webkit-outer-spin-button,
+input[type="number"].popUpPriceChoose::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    background: url("spinner.png") no-repeat center center;
+    background-color: transparent;
+    width: 10px;
+    border-left: none;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    right: 6px;
+    bottom: 0;
+}
+
+input[type="number"].popUpPriceChoose::-webkit-inner-spin-button:hover,
+input[type="number"].popUpPriceChoose::-webkit-inner-spin-button:active {
+    opacity: .8;
+}
+
+
+.popUpExecuteButtons {
+    display: flex;
+    margin: 30px auto 30px auto;
+    cursor: pointer;
+}
+
+#popUpClose {
+    float: right;
+    position: relative;
+    left: 23px;
+    font-size: 20px;
+    margin-top: 5px;
+    color: $secondary-white;
+    cursor: pointer;
+}
+
+#popUpCloseMissed,
+#popUpCloseTrader {
+    float: right;
+    position: absolute;
+    right: 13px;
+    top: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+    color: $secondary-white;
+    cursor: pointer;
+}
+
+
+.missedPopUp {
+    padding: 60px 33px 0 33px;
+}
+
+#popUpCloseRestrictions {
+    position: absolute;
+    right: 13px;
+    top: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+    color: $secondary-white;
+    cursor: pointer;
+        padding: 4px;
+}
+#popUpCloseRestrictions:hover {
+    background-color: lighten($pop-up-dark, 10deg);
+}
+
+
+#executeButton,
+#executeButtonTrader {
+    border: 1px solid rgba(235, 156, 5, .8);
+    color: #F5A201;
+    height: 37px;
+    cursor: pointer;
+    padding: 2px 10px 0px 10px;
+    letter-spacing: 1px !important;
+    background-color: transparent;
+    font-size: 12px !important;
+}
+
+
+
+#executeButton:hover, #executeButton:focus,
+#executeButtonTrader:hover, #executeButtonTrader:focus {
+    background-color: rgba(235, 156, 5, .8);
+    
+    color: white;
+    border: 1px solid transparent;
+    transition: .3s;
+}
+
+
+.colorDot {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    float: right;
+    border-radius: 50%;
+}
+
+#doneButton {
+    width: 140px;
+    display: block;
+    margin: 40px auto 30px;
+}
+
+#doneButtonMissed,
+#doneButtonTrader {
+    width: 120px;
+    margin: 44px auto;
+    display: block;
+}
+
+.dropDownMenu {
+    width: 100%;
+    position: relative;
+}
+
+.dropMenuRestrictions {
+    margin-top: 30px;
+}
+
+.dropDownMenu2 {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+}
+
+.restrictionsDropDown {
+    width: 170px;
+    /*top: 6px;*/
+}
+
+.dropDownTitle {
+    height: 37px;
+    border: 1px $medium-gray solid;
+    font-size: 13px;
+    padding-top: 12px;
+    padding-left: 7px;
+    position: relative;
+    letter-spacing: .8px;
+    z-index: 4;
+    color: $secondary-white;
+    cursor: pointer;
+}
+
+.radioGroupLabel {
+    margin-bottom: 4px;
+    font-size: 15px;
+    color: $band-gray;
+    letter-spacing: 0.8px;
+}
+
+
+.dropTrianglePopUp {
+    position: absolute;
+    right: 5px;
+    top: 33px;
+    font-size: 21px;
+    color: $secondary-white;
+    z-index: 3;
+}
+
+.dropTriangleRegular {
+    position: absolute;
+    right: 6px;
+    top: 8px;
+    font-size: 21px;
+    color: $secondary-white;
+    z-index: 3;
+}
+
+#popUpUrgencyDropDown,
+#popUpFollowDropDown {
+    position: absolute;
+    z-index: 5;
+    width: 300px;
+    text-align: left;
+    background-color: $dropdown-dark;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.13), 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.13), 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.13), 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+#popUpUrgencyDropDown li,
+#popUpFollowDropDown li {
+    width: 300px;
+}
+
+#popUpUrgencyDropDown {
+    top: 164px;
+    left: 33px;
+}
+
+#popUpFollowDropDown {
+    top: 252px;
+}
+
+
+/*///. list   //*/
+
+#pricerToolTickerMenu,
+#clientMenu {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    left: 0px;
+    top: 40px;
+    background-color: $dropdown-dark;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.13), 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.13), 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.13), 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+#pricerToolTickerMenu ul li,
+#pricerToolTickerMenu ul li {
+    text-transform: uppercase;
+}
+
+#clientMenu {
+    width: 130%;
+    div {
+       white-space: nowrap;
+        max-width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}
+
+
+
+li button {
+    width: 100%;
+    font-family: 'Roboto';
+    font-size: 12px;
+    line-height: 1.4em;
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-align: left;
+    padding: .75em .7em .65em 1em;
+    transition: .2s;
+    outline: none;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    color: white;
+    text-transform: uppercase;
+    border: 1px transparent solid;
+    letter-spacing: .8px;
+    cursor: pointer;
+}
+
+li.normal {
+    padding: .75em .7em .65em 1em;
+    transition: .2s;
+    outline: none;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    color: $primary-white;
+    letter-spacing: .8px;
+}
+
+li button.normal {
+    text-transform: capitalize;
+}
+
+ul li:first-child,
+ul li.normal:first-child {
+    padding-top: 5px !important;
+}
+
+ul li:last-child,
+ul li.normal:last-child {
+    padding-bottom: 5px;
+}
+
+.liColorPlain {
+    color: $primary-white;
+}
+
+li:hover,
+li:focus,
+li:active,
+{
+//    background-color: #595982;
+    cursor: pointer;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    outline: none;
+}
+
+li button:hover,
+li button:active,
+li button:focus {
+    border: 1px $focus-outline-blue solid;
+}
+
+#restrictionsPopUp {
+    position: absolute;
+    z-index: 6;
+    padding: 60px 33px 0 33px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.turnOff {
+    font-size: 16px;
+    color: $secondary-white;
+    letter-spacing: .8px;
+    margin-bottom: 27px;
+}
+
+
+#popUpRestrictionsDropDown,
+#popUpMissedDropDown {
+    position: absolute;
+    top: 50px;
+    z-index: 5;
+    color: $primary-white;
+    width: 100%;
+    text-align: left;
+    background-color: $dropdown-dark;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.13), 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.13), 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.13), 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+#okButton {
+    margin: 34px auto;
+    width: 100px;
+    display: block;
+    
+}
+
+.popUpButton {
+    background-color: $button-blue-popup;
+}
+
+.popUpButton:hover {
+    background-color: $button-blue-hover;
+    transition: .3s;
+}
+
+#popUpMarketDropDown {
+    position: absolute;
+    top: 38px;
+    z-index: 5;
+    color: $primary-white;
+    width: 100%;
+    text-align: left;
+    background-color: $dropdown-dark;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.13), 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.13), 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.13), 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    
+    background-color: #13132f;
+}
+
+::-webkit-scrollbar-thumb {
+    
+     background-color: #484875;
+}
+
+-ms-scrollbar-track-color {
+    background-color: #202040;
+}
+
+
+
+-ms-scrollbar-face-color {
+    background-color: #36365c;
+}
+
+
+::-webkit-scrollbar {
+  width: 12px;
+  /*height: 12px;*/
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #484776;
+  /*border: 2px none #56548f;*/
+  /*border-radius: 6px;*/
+}
+::-webkit-scrollbar-thumb:hover {
+  
+  background: #595982;
+}
+::-webkit-scrollbar-thumb:active {
+  
+   background: #595982;
+}
+::-webkit-scrollbar-track {
+  background: #121230;
+  /*border: 0px none #ffffff;*/
+  /*border-radius: 0px;*/
+}
+::-webkit-scrollbar-track:hover {
+  background: #121230;
+
+}
+::-webkit-scrollbar-track:active {
+  background: #121230;
+
+
+}
+/*::-webkit-scrollbar-corner {
+  background: transparent;
+
+*/
+.emptyChipInput {
+    display: inline-block;
+    text-align: left;
+    padding: 0 0 .4em 0;
+    min-height: 20px;
+}
+
+.chipIcon.mdi-close {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    left: 1px;
+    padding-left: 8px;
+    color: white;
+    font-size: 15px;
+}
+
+.chip {
+    display: inline-block;
+    height: 32px;
+    font-size: 13px;
+    font-weight: 400;
+    color: white;
+    padding: 9px 11px;
+    border-radius: 16px;
+    letter-spacing: .8px;
+    margin-right: 5px;
+    text-transform: uppercase;
+}
+
+.rowHistoryFlex {
+    // width: 100%;
+    // padding: 14px 15px;
+    padding: 0px 0px 0px 10px;
+    height: 40px;
+    display: flex;
+    flex:1;
+    flex-wrap: nowrap;
+    border-bottom: 4px $alternate-dark solid;
+    align-items: center;
+    letter-spacing: .8px;
+    background-color: $background-dark;
+}
+
+.rowHistoryFlex:hover {
+    background-color: #343463;
+    transition: .3s;
+}
+.columnHeaders:hover {
+    background-color: $background-dark;
+}
+
+
+.columnHeaders {
+    padding-bottom: 0px;
+    /*padding-right: 28px;*/
+}
+
+/*only padding right if there is scrolling*/
+
+.rowHistoryFlex .col {
+    
+    font-size: 12px;
+    font-weight: 400;
+    // padding-right: 5px;
+    text-align: right;
+    color: $history-text-gray;
+    letter-spacing: .8px;
+    
+    margin-left: 15px;
+}
+
+
+
+.rowHistoryFlex.columnHeaders .col {
+    font-weight: 400;
+    // padding-right: 7px;
+    text-align: right;
+    font-size: 12px;
+    color: $label-gray !important;
+   
+}
+
+.rowHistoryFlex .col.timeCol {
+    margin-left: 5px;
+    flex-basis: 7%;
+    text-align: right;
+}
+
+.rowHistoryFlex .col.tickerCol {
+    flex-basis: 11%;
+    text-align: left;
+    // padding-left: 10px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.rowHistoryFlex .col.priceCol {
+    
+    flex-basis: 11%;
+    // padding-left: 10px;
+}
+
+.rowHistoryFlex .col.qtyCol {
+    
+    flex-basis: 11%;
+    // padding-left: 10px;
+}
+
+.rowHistoryFlex .col.traderNameCol {
+    text-align: left;
+    // flex: 1;
+    flex-basis: 17%;
+    // padding-left: 10px;
+}
+
+.rowHistoryFlex .col.clientCol {
+    
+    flex-basis: 14%;
+    text-align: left;
+    // padding-left: 10px;
+}
+
+.rowHistoryFlex .col.sideCol {
+    
+    flex-basis: 4%;
+    min-width: 4%;
+    color: $green-bright;
+    font-weight: 500;
+    text-align: left;
+}
+
+.rowHistoryFlex .col.tradedCol {
+    
+    flex-basis: 8%;
+    // padding-right: 10px;
+    text-align: left;
+}
+
+.rowHistoryFlex .col.tickerCol, .rowHistoryFlex .col.priceCol, 
+ .rowHistoryFlex .col.traderNameCol, .rowHistoryFlex .col.clientCol, .rowHistoryFlex .col.tradedCol, .rowHistoryFlex .col.qtyCol{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+ }  
+
+
+.redTextImportant {
+    color: $red-bright !important;
+}
+
+.colColor {
+    color: $history-text-gray;
+}
+
+/*///////////////////////*/
+
+.radioGroupHack.radioButtonLabelSmall label {
+    width: 52px;
+}
+
+.radioGroupHack {
+    width: 100%;
+   
+}
+
+.radioGroupHack .flexDiv {
+    display: inline-block;
+    flex: 1;
+}
+
+.radioGroupHack label input[type=radio] {
+    position: absolute;
+    left: 1px;
+    visibility: hidden;
+}
+
+.radioGroupHack label {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 2px;
+    /*margin-right: 0px !important;*/
+    padding-left: 15px;
+    z-index: 9;
+    cursor: pointer;
+    -webkit-transition: all 0.25s linear;
+}
+
+
+
+.radioGroupHack label .check {
+    position: absolute;
+    z-index: 5;
+    top: 4px;
+    left: 0px;
+    padding: 0px;
+    outline: none;
+    transition: stroke .25s linear;
+    -webkit-transition: stroke .25s linear;
+    background-color: transparent;
+    fill: $medium-gray;
+    stroke: $medium-gray;
+    stroke-miterlimit: 10;
+    stroke-width: 1.87px;
+    transition: .25s;
+    cursor: pointer;
+}
+
+
+
+
+.radioGroupHack label .check svg circle:hover, .radioGroupHack label .check svg circle:focus {
+    stroke: $radio-blue;
+    stroke-miterlimit: 10;
+    stroke-width: 1.87px;
+
+}
+
+.popUpRowRadio {
+    margin-bottom: 8px;
+}
+
+input[type=radio]:checked ~ .check svg circle{
+    // border: 2px solid $radio-blue;
+    stroke: $radio-blue;
+    fill: $radio-blue;
+    stroke-miterlimit: 10;
+    stroke-width: 1.87px;
+}
+
+
+input[type=radio]:checked ~ .check svg circle::before {
+    fill: $radio-blue;
+}
+
+.innerLabelText {
+    display: inline-block;
+    padding: 6px 0px 0px 6px;
+    margin-right: 12px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: .8px;
+}
+
+.lowOpacity {
+    opacity: .1;
+}
+.lowOpacity:hover {
+    cursor: auto;
+}
+
+
+
+
+.panel-title {
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: .8px;
+}
+
+
+#pricing-chart g text {
+    fill: white;
+}
+
+
+
+
+#volume-chart div {
+  font: 10px sans-serif;
+  background-color: #C6555F;
+  text-align: right;
+  padding: 2px;
+  margin: 3px;
+  color: white;
+}
+
+.barText {
+    position: relative;
+    left: 23px;
+}
+
+#svg-chart rect, #container rect {
+  fill: #C6555F;
+
+}
+
+
+
+#svg-chart text, #container text {
+  fill: white;
+  font-size: 10px;
+  letter-spacing: .8px;
+  font-weight: 300;
+  // text-anchor: end;
+}
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: top;
+    overflow: hidden;
+}
+.svg-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.panel-body {
+    display: flex;
+}
+
+
+
+
+//// line chart
+
+
+
+#chart {
+  flex: 1;
+  height: 100%;
+
+}
+
+
+/* Style the lines by removing the fill and applying a stroke */
+#chart path.line {
+    fill: none;
+    stroke: teal;
+    stroke-width: 3;
+}
+
+/* Style the dots by assigning a fill and stroke */
+circle.dot {
+    fill: teal;
+    stroke: #fff;
+}

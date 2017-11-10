@@ -1,11 +1,105 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
-<body>
-<h1>My App</h1>
 
-<script src="app.js"></script>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="materialdesignicons.css">
+    <link rel="stylesheet" type="text/css" href="cssReset.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="justForPrototype.css" /> -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+     <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <title>CodeWeek</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="topHeader">
+            <div class="logo"></div>
+            <span class="beaconLogoText">Analytics</span>
+        </div>
+        <div class="bar">
+            <div class="navigation">
+                <span id="TCA" class="selected">Lorem</span>
+                <span id="Parameters">Ipsum</span>
+            </div>
+            <i class="mdi mdi-dots-vertical"></i>
+        </div>
+        <!-- end of bar -->
+        <div id="innerTCAwrapper" style="position:relative">
+           
+            <div class="topSection">
+                <div class='col-sm-12 col-md-6'>
+                    <div class="panel chart">
+                        <div class="panel-title">
+                            Client Data Div
+                        </div>
+                        <div class="panel-body">
+                            <div id="volume-chart" style="height:280px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="topSection">
+                <div class='col-sm-12 col-md-6'>
+                    <div class="panel chart">
+                        <div class="panel-title">
+                            Client Data SVG No Resize
+                        </div>
+                       
+                        <div class="svg-container">
+                            <svg id="svg-chart"></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="topSection">
+                <div class='col-sm-12 col-md-6'>
+                    <div class="panel chart">
+                        <div class="panel-title">
+                            Client Data SVG Resize
+                        </div>
+                       
+                        <div id="container" class="svg-container">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="topSection">
+                <div class='col-sm-12 col-md-6'>
+                    <div class="panel chart">
+                        <div class="panel-title">
+                            Intraday Pricing Chart
+                        </div>
+                        <div class="panel-body">
+                            <div id="pricing-chart" class="svg-container"></div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="topSection">
+                <div class='col-sm-12 col-md-6'>
+                    <div class="panel chart">
+                        <div class="panel-title">
+                            Intraday Pricing Chart
+                        </div>
+                        <div class="panel-body">
+                            <div id="chart"></div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <!-- end of wrapper -->
 </body>
+
 </html>

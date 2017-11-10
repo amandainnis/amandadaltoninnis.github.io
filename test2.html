@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery.getJSON demo</title>
+  
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
+ 
+<div style="background-color: aliceblue; min-height: 10px; min-width: 10px;" id="demo"></div>
+ 
+<script>
+var myJSON = "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=AMZN&interval=1min&apikey=NKT90SOYWKFBP04F";
+
+$.getJSON( myJSON, handleResponse);
+console.log("yo this is myJson " + myJSON);
+function handleResponse(response){
+  console.log(response);
+  var symbol = response["Meta Data"]["2. Symbol"];
+  console.log(symbol);
+  var symbolInfo = response["Time Series (1min)"];
+  console.log(symbolInfo);
+  var timeInfo = [];
+  var myDate;
+  var myPrice;
+  var myVolume;
+  Object.keys(symbolInfo).forEach(function(key) {
+    myDate = key.substr(0, 10);
+    var shortKey = key.substr(11, 15);
+    // console.log(shortKey, symbolInfo[key]);
+    myPrice = parseFloat(symbolInfo[key]["4. close"]);
+    myVolume = parseInt(symbolInfo[key]["5. volume"]);
+    console.log(shortKey, myPrice, myVolume);
+
+});
+
+  console.log(myDate);
+  console.log(typeof myVolume);
+  
+}
+
+
+
+</script>
+ 
+</body>
+</html>
+
+
